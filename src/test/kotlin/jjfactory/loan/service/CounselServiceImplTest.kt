@@ -84,4 +84,25 @@ class CounselServiceImplTest {
             counselService.get(id)
         }.isInstanceOf(BaseException::class.java)
     }
+
+    @Test
+    fun `삭제`() {
+        //given
+        val id = 1L
+
+        val counsel = Counsel(
+            name = "이재형",
+            phone = "010-1234-1234",
+            email = "wogud111@test.com",
+            memo = "대출 상담 드립니다."
+        )
+
+        //stub
+        `when`(counselRepository.findById(id)).thenReturn(Optional.ofNullable(counsel))
+
+        //when
+        counselService.delete(id)
+        //then
+        assertThat(counsel.isDeleted).isSameAs(true)
+    }
 }

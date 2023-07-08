@@ -14,5 +14,9 @@ abstract class BaseEntity(
     val createdAt: LocalDateTime? = null,
     @LastModifiedDate
     val updatedAt: LocalDateTime? = null,
-    val isDeleted: Boolean = false
-)
+    var isDeleted: Boolean = false
+){
+    fun delete(){
+        isDeleted = true
+    }
+}

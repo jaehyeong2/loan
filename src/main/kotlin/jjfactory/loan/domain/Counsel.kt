@@ -4,8 +4,10 @@ import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
+import org.hibernate.annotations.Where
 import java.time.LocalDateTime
 
+@Where(clause = "isDeleted = false")
 @Entity
 class Counsel(
     @Id
