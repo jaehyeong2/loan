@@ -2,11 +2,9 @@ package jjfactory.loan.service
 
 import jjfactory.loan.config.ModelMapper
 import jjfactory.loan.domain.Application
-import jjfactory.loan.domain.Counsel
 import jjfactory.loan.exception.BaseException
 import jjfactory.loan.infrastructure.ApplicationRepository
 import jjfactory.loan.presentation.dto.ApplicationDto
-import jjfactory.loan.presentation.dto.CounselDto
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Service
 
